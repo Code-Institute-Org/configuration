@@ -29,6 +29,8 @@ EDXAPP_THIRD_PARTY_AUTH_BACKENDS:
  - social_core.backends.vk.VKOAuth2
  - third_party_auth.saml.SAMLAuthBackend
  - third_party_auth.lti.LTIAuthBackend
+
+EDXAPP_RG_SENTRY_DSN: "{{ COMMON_RG_SENTRY_DSN }}"
 ## END RACCOONGANG ##
 
 # Bucket used for xblock file storage
@@ -1112,6 +1114,7 @@ generic_env_config:  &edxapp_generic_env
   ## BEGIN RACCOONGANG ##
   S3_USE_SIGV4: "{{ EDXAPP_S3_USE_SIGV4 }}"
   S3_HOST: "{{ EDXAPP_S3_HOST }}"
+  RG_SENTRY_DSN: "{{ EDXAPP_RG_SENTRY_DSN }}"
   ## END RACCOONGANG ##
 
 lms_auth_config:

@@ -1,3 +1,7 @@
+- Roles: common_vars
+  * Added COMMON_RG_SENTRY_DSN for Sentry integration for all services
+  * Added EDXAPP_RG_SENTRY_DSN for LMS and CMS Sentry integration
+
 - Roles: nginx
   - Added RG_NGINX_LMS_CLIENT_MAX_BODY_SIZE, RG_NGINX_CMS_CLIENT_MAX_BODY_SIZE to override `client_max_body_size` in lms and cms nginx configuration.
 
