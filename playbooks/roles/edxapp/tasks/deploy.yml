@@ -76,6 +76,7 @@
     dest: "{{ edxapp_app_dir }}/themes/{{ edxapp_theme_name }}"
     repo: "{{ edxapp_theme_source_repo }}"
     version: "{{ edxapp_theme_version }}"
+    key_file: "{{ edxapp_git_identity }}"
     accept_hostkey: yes
   when: edxapp_theme_name != ''
   become_user: "{{ edxapp_user }}"

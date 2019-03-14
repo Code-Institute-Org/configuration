@@ -1,6 +1,6 @@
 ---
 - name: Look for mysql 5.6
-  shell: "dpkg -s mysql-server"
+  shell: "dpkg -s mysql-server-5.6"
   ignore_errors: yes
   register: mysql_56_installed
   changed_when: no
