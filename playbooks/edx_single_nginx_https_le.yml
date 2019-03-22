@@ -1,0 +1,24 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  vars:
+    nginx: yes
+    nginx_ssl: no
+    nginx_letsencrypt: yes
+    nginx_letsencrypt_setup: yes
+    insights: no
+  roles:
+   - { role: nginx-custom }
+
+- hosts: all
+  gather_facts: yes
+  become: yes
+  vars:
+    nginx: yes
+    nginx_ssl: yes
+    nginx_letsencrypt: yes
+    insights: no
+  roles:
+    - { role: nginx-custom }
+
