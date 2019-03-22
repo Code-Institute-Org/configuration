@@ -1,0 +1,20 @@
+---
+
+- include_tasks: install.yml
+  when: nginx_install
+
+- include_tasks: edx.yml
+  when: nginx
+  tags:
+    - install
+    - nginx
+
+- include_tasks: letsencrypt.yml
+  when: nginx_letsencrypt and nginx_letsencrypt_setup
+  tags:
+    - install
+    - nginx
+    - letsencrypt
+
+- include_tasks: htpasswd.yml
+  when: htpasswd_enabled
